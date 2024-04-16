@@ -12,8 +12,9 @@ $config = [
         '@npm'   => '@vendor/npm-asset',
     ],
     'modules' => [
-        // 'admin' => ['class' => 'app\modules\admin\Module',],
-        'admin' => ['class' => 'app\modules\admin\Module',],
+        'super-admin' => ['class' => 'app\modules\superAdmin\Module',],
+        'delivery-boy' => ['class' => 'app\modules\deliveryBoy\Module',],
+        'vendor' => ['class' => 'app\modules\vendor\Module',],
     ],
     'components' => [
         'request' => [
