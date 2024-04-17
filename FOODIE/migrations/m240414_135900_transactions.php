@@ -25,7 +25,7 @@ class m240414_135900_transactions extends Migration
             'fk-transaction-customer_id',
             '{{%transaction}}',
             'customer_id',
-            '{{%customers}}',
+            '{{%customer}}',
             'id',
             'CASCADE'
         );
@@ -34,7 +34,7 @@ class m240414_135900_transactions extends Migration
             'fk-transaction-vendor_id',
             '{{%transaction}}',
             'vendor_id',
-            '{{%vendors}}',
+            '{{%vendor}}',
             'id',
             'CASCADE'
         );

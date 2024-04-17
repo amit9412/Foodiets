@@ -12,7 +12,17 @@ class m240414_134927_customers extends Migration
      */
     public function safeUp()
     {
-
+        $this->createTable('customer', [
+            'id' => $this->primaryKey(),
+            'name' => $this->string()->notNull(),
+            'email' => $this->string()->unique()->notNull(),
+            'aadhar_card' => $this->string()->notNull(),
+            'profile_image' => $this->string(),
+            'phone_number' => $this->string(),
+            'address_city' => $this->string(),
+            'address_state' => $this->string(),
+            // ... other customer-specific fields
+        ]);
     }
 
     /**

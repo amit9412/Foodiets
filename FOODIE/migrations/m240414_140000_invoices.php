@@ -25,7 +25,7 @@ class m240414_140000_invoices extends Migration
             'fk-invoice-vendor_id',
             '{{%invoice}}',
             'vendor_id',
-            '{{%vendors}}',
+            '{{%vendor}}',
             'id',
             'CASCADE'
         );
@@ -34,7 +34,7 @@ class m240414_140000_invoices extends Migration
             'fk-invoice-customer_id',
             '{{%invoice}}',
             'customer_id',
-            '{{%customers}}',
+            '{{%customer}}',
             'id',
             'CASCADE'
         );

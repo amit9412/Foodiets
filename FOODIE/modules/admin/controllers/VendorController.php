@@ -14,6 +14,7 @@ use yii\filters\VerbFilter;
 class VendorController extends Controller
 {
     public $layout = '@app/themes/backend/main';
+    // public $layout = '/FOODIETS/foodieits-html/vendor/products.php';
     /**
      * @inheritDoc
      */

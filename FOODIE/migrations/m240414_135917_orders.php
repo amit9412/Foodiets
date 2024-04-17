@@ -26,7 +26,7 @@ class m240414_135917_orders extends Migration
             'fk-order-customer_id',
             '{{%order}}',
             'customer_id',
-            '{{%customers}}',
+            '{{%customer}}',
             'id',
             'CASCADE'
         );
@@ -35,7 +35,7 @@ class m240414_135917_orders extends Migration
             'fk-order-vendor_id',
             '{{%order}}',
             'vendor_id',
-            '{{%vendors}}',
+            '{{%vendor}}',
             'id',
             'CASCADE'
         );

@@ -12,7 +12,7 @@ class m240414_135824_shop_details extends Migration
      */
     public function safeUp()
     {
-        $this->createTable('{{%shop_details}}', [
+        $this->createTable('{{%shop_detail}}', [
             'id' => $this->primaryKey(),
             'owner_image' => $this->string(),
             'shop_name' => $this->string()->notNull(),

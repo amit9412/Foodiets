@@ -12,7 +12,7 @@ class m240414_135139_vendors extends Migration
      */
     public function safeUp()
     {
-        $this->createTable('{{%vendors}}', [
+        $this->createTable('{{%vendor}}', [
             'id' => $this->primaryKey(),
             'name' => $this->string()->notNull(),
             'address' => $this->text()->notNull(),
