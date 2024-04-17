@@ -1,3 +1,14 @@
+<?php
+
+/* @var $this yii\web\View */
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
+use yii\helpers\Url;
+
+$this->title = Yii::t("app","Admin | Chat");
+
+?>
+
 <!-- Breadcrumb Start-->
 <div class="row">
     <div class="col-12">
