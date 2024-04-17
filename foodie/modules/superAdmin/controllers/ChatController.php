@@ -16,6 +16,8 @@ class ChatController extends Controller
      * @inheritDoc
      */
 
+    public $layout = '@app/themes/backend/login-layout';
+
     public function behaviors()
     {
         return array_merge(
@@ -33,7 +35,7 @@ class ChatController extends Controller
 
     public function actionIndex()
     {
-        var_dump('dddf');
+        return $this->render('index');
     }
 
 

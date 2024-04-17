@@ -10,7 +10,7 @@ use yii\helpers\Url;
             <h4 class="mb-sm-0 font-size-18">Customers List</h4>
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
-                    <li class="breadcrumb-item"><a href="<?= Url::to(['/admin/dashboard']) ?>"">Dashboards</a></li>
+                    <li class="breadcrumb-item"><a href="<?= Url::to(['/admin/dashboard']) ?>">Dashboards</a></li>
                     <li class=" breadcrumb-item active">List</li>
                 </ol>
             </div>
