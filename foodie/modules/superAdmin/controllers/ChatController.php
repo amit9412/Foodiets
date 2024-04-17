@@ -16,7 +16,7 @@ class ChatController extends Controller
      * @inheritDoc
      */
 
-    public $layout = '@app/themes/backend/login-layout';
+    public $layout = '@app/themes/backend/main';
 
     public function behaviors()
     {
