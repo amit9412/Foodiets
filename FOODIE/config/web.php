@@ -11,6 +11,11 @@ $config = [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
+    'modules' => [
+        'super-admin' => ['class' => 'app\modules\superAdmin\Module',],
+        'delivery-boy' => ['class' => 'app\modules\deliveryBoy\Module',],
+        'vendor' => ['class' => 'app\modules\vendor\Module',],
+    ],
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
@@ -25,7 +30,7 @@ $config = [
         ],
         'user' => [
             'identityClass' => 'app\models\User',
-            'enableAutoLogin' => true,
+            'enableAutoLogin' => false,
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -47,16 +52,17 @@ $config = [
         ],
         'db' => $db,
         'urlManager' => [
-            'enablePrettyUrl' => true,
+            'class' => 'yii\web\UrlManager',
             'showScriptName' => false,
+            'enablePrettyUrl' => true,
             'rules' => [
                 'superAdmin' => 'super-admin'
             ],
         ],
-    ],
-    'modules' => [
-        // 'admin' => ['class' => 'app\modules\admin\Module',],
-        'admin' => ['class' => 'app\modules\admin\Module',],
+        'authManager' => [
+            'class' => 'yii\rbac\DbManager',
+            // 'defaultRoles' => ['user'],
+        ],
     ],
     'params' => $params,
 ];

@@ -30,6 +30,10 @@ $config = [
             ],
         ],
         'db' => $db,
+        'authManager' => [
+            'class' => 'yii\rbac\DbManager',
+            // 'defaultRoles' => ['user'],
+        ],
     ],
     'params' => $params,
     /*
