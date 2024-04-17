@@ -5,6 +5,8 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\Url;
 
+$this->title = Yii::t("app","Admin | Login");
+
 ?>
 
 <div class="row justify-content-center">
