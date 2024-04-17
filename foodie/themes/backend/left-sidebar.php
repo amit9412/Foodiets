@@ -10,19 +10,19 @@ use yii\helpers\Url;
             <!-- Left Menu Start -->
             <ul class="metismenu list-unstyled" id="side-menu">
                 <li>
-                    <a href="<?= Url::to(['/admin/dashboard']) ?>" class="waves-effect">
+                    <a href="<?= Url::to(['/super-admin/dashboard']) ?>" class="waves-effect">
                         <i class="bx bx-home-circle"></i>
                         <span key="t-dashboards">Dashboards</span>
                     </a>
                 </li>
                 <li>
-                    <a href="<?= Url::to(['/admin/customer']) ?>" class="waves-effect">
+                    <a href="<?= Url::to(['/super-admin/customer']) ?>" class="waves-effect">
                         <i class="bx bx-id-card"></i>
                         <span key="t-customers">Customers</span>
                     </a>
                 </li>
                 <li>
-                    <a href="<?= Url::to(['/admin/vendor']) ?>" class="waves-effect">
+                    <a href="<?= Url::to(['/super-admin/vendor']) ?>" class="waves-effect">
                         <i class="bx bx-user-pin"></i>
                         <span key="t-vendors">Vendors</span>
                     </a>
