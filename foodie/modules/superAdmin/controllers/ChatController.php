@@ -1,18 +1,47 @@
 <?php
 
-namespace app\controllers;
+namespace app\modules\superAdmin\controllers;
 
 use Yii;
 use yii\web\Controller;
 use app\models\Chat;
+use yii\filters\VerbFilter;
 
+/**
+ * ChatController implements the Chat actions for Chat model.
+ */
 class ChatController extends Controller
 {
+    /**
+     * @inheritDoc
+     */
+
+    public function behaviors()
+    {
+        return array_merge(
+            parent::behaviors(),
+            [
+                'verbs' => [
+                    'class' => VerbFilter::className(),
+                    'actions' => [
+                        'delete' => ['POST'],
+                    ],
+                ],
+            ]
+        );
+    }
+
+    public function actionIndex()
+    {
+        var_dump('dddf');
+    }
+
+
     public function actionSendMessage($receiverId, $message)
     {
         // Use WebSocket to send message to the receiver
         Yii::$app->websocket->sendToUser($receiverId, $message);
-        
+
         // Save the message to the database
         $senderId = Yii::$app->user->id;
         $chat = new Chat();

@@ -49,4 +49,13 @@ return array (
       '@yii/gii' => $vendorDir . '/yiisoft/yii2-gii/src',
     ),
   ),
+  'consik/yii2-websocket' => 
+  array (
+    'name' => 'consik/yii2-websocket',
+    'version' => '1.0.1.0',
+    'alias' => 
+    array (
+      '@consik/yii2websocket' => $vendorDir . '/consik/yii2-websocket',
+    ),
+  ),
 );
