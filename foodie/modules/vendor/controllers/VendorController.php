@@ -6,6 +6,7 @@ use app\models\Vendor;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\helpers\Url;
 
 
 /**
@@ -13,8 +14,7 @@ use yii\filters\VerbFilter;
  */
 class VendorController extends Controller
 {
-    public $layout = '@app/themes/backend/main';
-    // public $layout = '/FOODIETS/foodieits-html/vendor/products.php';
+    public $layout = '@app/themes/backend/main1';
     /**
      * @inheritDoc
      */
@@ -70,7 +70,7 @@ class VendorController extends Controller
     {
         $model = new Vendor();
 
-        $a = Url::to(['/vendor/dashboard']);
+        $a = Url::to(['/superAdmin/dashboard']);
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {

@@ -3,6 +3,9 @@
 namespace app\modules\vendor\controllers;
 
 use yii\web\Controller;
+use yii\helpers\Url;
+use yii;
+use yii\rbac\Role;
 
 /**
  * Default controller for the `vendor` module
@@ -14,16 +17,14 @@ class DefaultController extends Controller
      * @return string
      */
 
-    public $layout = '@app/themes/backend/main';
-
+     public $layout = '@app/themes/backend/main1';
     public function actionIndex()
     {
-        return $this->render('index');
-    }
-
-    public function actionLogin()
-    {
-        $this->layout = '@app/themes/backend/login-layout';
-        return $this->render('login');
+        $authManager = Yii::$app->authManager;
+        if ($authManager->checkAccess(Yii::$app->user->id, 'vendor')) {
+            return $this->redirect(Url::to(['dashboard/']));
+        } else {
+            return $this->redirect(Url::to(['login/']));
+        }
     }
 }

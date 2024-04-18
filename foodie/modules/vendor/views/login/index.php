@@ -5,6 +5,8 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\Url;
 
+$this->title = Yii::t("app","Admin | Login");
+
 ?>
 
 <div class="row justify-content-center">
@@ -53,7 +55,7 @@ use yii\helpers\Url;
                 </div>
 
                 <div class="text-end">
-                    <a href="/super-admin/forgot-password.php" class="text-muted"><i class="mdi mdi-lock me-1"></i>
+                    <a href="<?= Url::to(['/super-admin/forgot-password']) ?>" class="text-muted"><i class="mdi mdi-lock me-1"></i>
                         Forgot your password?</a>
                 </div>
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace app\modules\vendor\controllers;
+namespace app\modules\superAdmin\controllers;
 
 use app\models\Customer;
 use yii\web\Controller;

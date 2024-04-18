@@ -126,3 +126,23 @@ use yii\helpers\Url;
         </div>
     </div>
 </div>
+<div id="ViewDetails" class="modal fade" tabindex="-1" aria-labelledby="ViewDetailsLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title mt-0" id="ViewDetailsLabel">View Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h5>Full Name</h5>
+                <p>John Doe</p>
+                <h5>Phone/Mobile</h5>
+                <p>656-6989-698 </p>
+                <h5>Description</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa illo porro reprehenderit accusamus
+                    velit non quis. Aliquam officia suscipit voluptate perferendis? Nesciunt aperiam quae voluptas,
+                    molestiae doloribus voluptatem molestias modi.</p>
+            </div>
+        </div>
+    </div>
+</div>

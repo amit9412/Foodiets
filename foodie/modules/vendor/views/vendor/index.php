@@ -10,7 +10,7 @@ use yii\helpers\Url;
             <h4 class="mb-sm-0 font-size-18">Vendors List</h4>
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
-                    <li class="breadcrumb-item"><a href="<?= Url::to(['/vendor/dashboard']) ?>">Dashboards</a></li>
+                    <li class="breadcrumb-item"><a href="<?= Url::to(['/admin/dashboard']) ?>">Dashboards</a></li>
                     <li class=" breadcrumb-item active">List</li>
                 </ol>
             </div>
@@ -58,7 +58,7 @@ use yii\helpers\Url;
                                     </div>
                                 </td>
                                 <td>
-                                    <a href="<?= Url::to(['/vendor/customer/view', 'id' => $singleValue->id]) ?>" class="btn p-0 avatar-xs btn-primary waves-effect waves-light">
+                                    <a href="<?= Url::to(['/admin/customer/view', 'id' => $singleValue->id]) ?>" class="btn p-0 avatar-xs btn-primary waves-effect waves-light">
                                         <i class="bx bx-list-ul mt-2 font-size-15 align-middle"></i>
                                     </a>
                                 </td>
