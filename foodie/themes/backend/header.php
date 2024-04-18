@@ -1,4 +1,7 @@
-<?php /*
+
+<?php
+use yii\helpers\Url;
+/*
 <header id="header">
     <?php
     NavBar::begin([
@@ -34,7 +37,7 @@
         <div class="d-flex">
             <!-- LOGO -->
             <div class="navbar-brand-box">
-                <a href="/super-admin/dashboard.php" class="logo logo-light">
+                <a href="<?= Url::to(['/super-admin/dashboard']) ?>" class="logo logo-light">
                     <span class="logo-sm">
                         <img src="<?=Yii::getAlias('@web')?>/themes/backend/admin-assets/images/logo-light.svg" alt="" height="35">
                     </span>
@@ -171,13 +174,13 @@
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
                     <!-- item-->
-                    <a class="dropdown-item" href="/super-admin/profile.php"><i
-                            class="bx bx-user font-size-16 align-middle me-1"></i> <span
+                    <a class="dropdown-item" href="<?= Url::to(['/super-admin/profile']) ?>">
+                        <i class="bx bx-user font-size-16 align-middle me-1"></i> <span
                             key="t-profile">Profile</span></a>
-                    <a class="dropdown-item" href="/super-admin/change-password.php"><i
+                    <a class="dropdown-item" href="<?= Url::to(['/super-admin/change-password']) ?>"><i
                             class="bx bx-lock-open font-size-16 align-middle me-1"></i> <span key="t-lock-screen">Change
                             Password</span></a>
-                    <a class="dropdown-item text-danger" href="/super-admin/index.php"><i
+                    <a class="dropdown-item text-danger" href="<?= Url::to(['/super-admin/login']) ?>"><i
                             class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span
                             key="t-logout">Logout</span></a>
                 </div>
