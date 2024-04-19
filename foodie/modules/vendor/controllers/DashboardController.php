@@ -14,7 +14,7 @@ class DashboardController extends Controller
      * @return string
      */
 
-    public $layout = '@app/themes/backend/main';
+    public $layout = '@app/themes/backend/main1';
 
     public function actionIndex()
     {
