@@ -14,7 +14,8 @@ $this->title = Yii::t("app", "Admin | Login");
         <div class="card overflow-hidden">
             <div class="card-body">
                 <div class="auth-logo mb-3 text-center">
-                    <img src="<?php echo ADMIN_IMAGES_URL ?>/logo.svg" alt="" height="50">
+                    <img src="<?= Yii::getAlias('@web') ?>/themes/backend/admin-assets/images/logo.svg" alt=""
+                        height="50">
                 </div>
                 <form class="form-horizontal" action="dashboards.php">
                     <div class="mb-3">
@@ -31,16 +32,16 @@ $this->title = Yii::t("app", "Admin | Login");
                         </div>
                     </div>
                     <div class="text-end">
-                        <a href="<?php echo BASE_URL ?>/vendor/forgot-password.php" class="text-muted"><i
-                                class="mdi mdi-lock me-1"></i> Forgot your password?</a>
+                        <a href="<?= Url::to(['vendor/forgot-password']) ?>"
+                            class="text-muted"><i class="mdi mdi-lock me-1"></i> Forgot your password?</a>
                     </div>
                     <div class="mt-3 d-grid">
-                        <a href="<?php echo BASE_URL ?>/vendor/dashboard.php"
+                        <a href="<?= Url::to(['vendor/dashboard']) ?>"
                             class="btn btn-success waves-effect waves-light"> Log In</a>
                     </div>
                     <div class="mt-4 text-center">
                         <span class="text-muted">Don't have an account? <a
-                                href="<?php echo BASE_URL ?>/vendor/register.php" class="fw-medium text-dark">
+                                href="<?= Url::to(['vendor/register']) ?>/vendor/register.php" class="fw-medium text-dark">
                                 Register</a>
                         </span>
                     </div>
