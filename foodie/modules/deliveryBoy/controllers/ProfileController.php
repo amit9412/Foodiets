@@ -1,6 +1,6 @@
 <?php
 
-namespace app\modules\superAdmin\controllers;
+namespace app\modules\deliveryBoy\controllers;
 
 use app\models\Vendor;
 use yii\web\Controller;
@@ -17,7 +17,7 @@ use Yii;
 class ProfileController extends Controller
 {
     public $layout = '@app/themes/backend/main-layout';
-/**
+    /**
      * @inheritDoc
      */
     public function behaviors()
@@ -29,7 +29,7 @@ class ProfileController extends Controller
                     [
                         //'actions' => ['login', 'error'], // Define specific actions
                         'allow' => true, // Has access
-                        'roles' => ['super-admin'], // '@' All logged in users / or your access role e.g. 'admin', 'user'
+                        'roles' => ['delivery-boy'], // '@' All logged in users / or your access role e.g. 'admin', 'user'
                     ],
                     [
                         'allow' => false, // Do not have access
@@ -54,7 +54,7 @@ class ProfileController extends Controller
         return $this->goHome();
     }
 
-
+    
     /**
      * Lists all Vendor models.
      *

@@ -3,8 +3,6 @@
 use yii\helpers\Url;
 
 $userRole = (\Yii::$app->user->identity) ? \Yii::$app->user->identity->user_role : 'undefined';
-
-$userRole = 'vendor';
 ?>
 <!-- ========== Left Sidebar Start ========== -->
 <div class="vertical-menu">

@@ -6,7 +6,10 @@ use app\models\Vendor;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
 use app\models\LoginForm;
+use yii\helpers\Url;
+use Yii;
 
 
 /**
@@ -20,17 +23,28 @@ class LoginController extends Controller
      */
     public function behaviors()
     {
-        return array_merge(
-            parent::behaviors(),
-            [
-                'verbs' => [
-                    'class' => VerbFilter::className(),
-                    'actions' => [
-                        'delete' => ['POST'],
+        return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+                    [
+                        //'actions' => ['login', 'error'], // Define specific actions
+                        'allow' => true, // Has access
+                        'roles' => ['vendor'], // '@' All logged in users / or your access role e.g. 'admin', 'user'
+                    ],
+                    [
+                        'allow' => true, // Do not have access
+                        'roles' => ['?'], // Guests '?'
                     ],
                 ],
-            ]
-        );
+            ],
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    'delete' => ['POST'],
+                ],
+            ],
+        ];
     }
 
     /**
@@ -40,20 +54,11 @@ class LoginController extends Controller
      */
     public function actionIndex()
     {
-        // $model = new Login();
-        
-        // return $this->render('index', [
-        //     'model' => $modelData,
-        // ]);
-
-        // if (!Yii::$app->user->isGuest) {
-        //     return $this->goHome();
-        // }
-
         $model = new LoginForm();
-        // if ($model->load(Yii::$app->request->post()) && $model->login()) {
-        //     return $this->goBack();
-        // }
+        if ($model->load(Yii::$app->request->post()) && $model->login()) {
+            // return $this->goBack();
+            return $this->redirect(Url::to(['/vendor/dashboard']));
+        }
 
         //$model->password = '';
         return $this->render('index', [

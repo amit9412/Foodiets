@@ -34,7 +34,6 @@ use yii\helpers\Url;
 
 
 $userRole = (\Yii::$app->user->identity) ? \Yii::$app->user->identity->user_role : 'undefined';
-$userRole = 'vendor';
 if ($userRole == 'super-admin') {
     $main_url = Url::to(['/super-admin/dashboard']);
 } else if ($userRole == 'vendor') {

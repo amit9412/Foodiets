@@ -6,6 +6,7 @@ use app\models\Vendor;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
 use yii\helpers\Url;
 
 
@@ -20,17 +21,28 @@ class OrderController extends Controller
      */
     public function behaviors()
     {
-        return array_merge(
-            parent::behaviors(),
-            [
-                'verbs' => [
-                    'class' => VerbFilter::className(),
-                    'actions' => [
-                        'delete' => ['POST'],
+        return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+                    [
+                        //'actions' => ['login', 'error'], // Define specific actions
+                        'allow' => true, // Has access
+                        'roles' => ['delivery-boy'], // '@' All logged in users / or your access role e.g. 'admin', 'user'
+                    ],
+                    [
+                        'allow' => false, // Do not have access
+                        'roles' => ['?'], // Guests '?'
                     ],
                 ],
-            ]
-        );
+            ],
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    'delete' => ['POST'],
+                ],
+            ],
+        ];
     }
 
     /**

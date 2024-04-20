@@ -6,7 +6,10 @@ use app\models\Vendor;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
 use app\models\LoginForm;
+use yii\helpers\Url;
+use Yii;
 
 
 /**
@@ -15,22 +18,33 @@ use app\models\LoginForm;
 class LoginController extends Controller
 {
     public $layout = '@app/themes/backend/login-layout';
-    /**
+/**
      * @inheritDoc
      */
     public function behaviors()
     {
-        return array_merge(
-            parent::behaviors(),
-            [
-                'verbs' => [
-                    'class' => VerbFilter::className(),
-                    'actions' => [
-                        'delete' => ['POST'],
+        return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+                    [
+                        //'actions' => ['login', 'error'], // Define specific actions
+                        'allow' => true, // Has access
+                        'roles' => ['super-admin'], // '@' All logged in users / or your access role e.g. 'admin', 'user'
+                    ],
+                    [
+                        'allow' => true, // Do not have access
+                        'roles' => ['?'], // Guests '?'
                     ],
                 ],
-            ]
-        );
+            ],
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    'delete' => ['POST'],
+                ],
+            ],
+        ];
     }
 
     /**
@@ -41,7 +55,7 @@ class LoginController extends Controller
     public function actionIndex()
     {
         // $model = new Login();
-        
+
         // return $this->render('index', [
         //     'model' => $modelData,
         // ]);
@@ -51,15 +65,35 @@ class LoginController extends Controller
         // }
 
         $model = new LoginForm();
-        // if ($model->load(Yii::$app->request->post()) && $model->login()) {
-        //     return $this->goBack();
-        // }
+        if ($model->load(Yii::$app->request->post()) && $model->login()) {
+            // return $this->goBack();
+            return $this->redirect(Url::to(['/super-admin/dashboard']));
+        }
 
         //$model->password = '';
         return $this->render('index', [
             'model' => $model,
         ]);
     }
+
+
+    // function actionTest()
+    // {
+    //     $model = new User();
+    //     // $model->scenario = 'userCreateByAdmin';
+    //     $model->name = 'Customer';
+    //     $model->email = 'customer@test.com';
+    //     $model->mobile = 9999999999;
+    //     $model->password = '123456';
+    //     $model->c_password = $model->password;
+
+    //     $u = $model->saveUser($model);
+
+    //     var_dump($u);
+
+    //     echo "saved";
+
+    // }
 
     /**
      * Finds the Vendor model based on its primary key value.
