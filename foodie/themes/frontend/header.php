@@ -62,7 +62,7 @@ use yii\helpers\Url;
                         </li>
                         <?php if (Yii::$app->user->isGuest) { ?>
                             <li class="nav-item">
-                                <a class="nav-link btn nav-btn" href="login.php">Login</a>
+                                <a class="nav-link btn nav-btn" href="<?= Url::to(['/site/login']) ?>">Login</a>
                             </li>
                         <?php } else { ?>
 
