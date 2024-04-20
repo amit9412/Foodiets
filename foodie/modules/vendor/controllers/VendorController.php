@@ -14,7 +14,7 @@ use yii\helpers\Url;
  */
 class VendorController extends Controller
 {
-    public $layout = '@app/themes/backend/main1';
+    public $layout = '@app/themes/backend/main-layout';
     /**
      * @inheritDoc
      */

@@ -16,8 +16,7 @@ $this->title = Yii::t("app", "Admin | Chat");
             <h4 class="mb-sm-0 font-size-18">Admin Payment</h4>
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
-                    <li class="breadcrumb-item"><a href="<?= Url::to(['/vendor/dashboard']) ?>">Dashboards</a>
-                    </li>
+                    <li class="breadcrumb-item"><a href="<?php echo BASE_URL ?>/vendor/dashboard.php">Dashboards</a></li>
                     <li class="breadcrumb-item active">Payment List</li>
                 </ol>
             </div>
@@ -54,13 +53,10 @@ $this->title = Yii::t("app", "Admin | Chat");
                             <tr>
                                 <th>Sno</th>
                                 <th>Invoice Id</th>
-                                <th>Vendor Id</th>
-                                <th>Vendor Name</th>
                                 <th>Amount</th>
                                 <th>Payment Status</th>
-                                <th>Make Payment</th>
-                                <th>Send By</th>
                                 <th>Date</th>
+                                <th>Send By</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -68,15 +64,12 @@ $this->title = Yii::t("app", "Admin | Chat");
                             <tr>
                                 <td>#1</td>
                                 <td>#56985</td>
-                                <td>#56985</td>
-                                <td>John Doe</td>
                                 <td>₹1500.00</td>
-                                <td><span class="badge badge-pill badge-soft-warning font-size-12">Pending</span>
+                                <td>
+                                    <span class="badge badge-pill badge-soft-warning font-size-12">Pending</span>
                                 </td>
-                                <td><button type="button"
-                                        class="btn btn-success w-xs btn-sm waves-effect waves-light">Pay</button></td>
-                                <td>Vendor Name</td>
                                 <td>05/08/2021</td>
+                                <td>You</td>
                                 <td>
                                     <a href="javascript:void(0);"
                                         class="btn p-0 avatar-xs btn-primary waves-effect waves-light">
@@ -101,12 +94,10 @@ $this->title = Yii::t("app", "Admin | Chat");
                                 <th>Sno</th>
                                 <th>Transfer Id</th>
                                 <th>Invoice Id</th>
-                                <th>Vendor Id</th>
-                                <th>Vendor Name</th>
                                 <th>Amount</th>
                                 <th>Payment Status</th>
-                                <th>Send By</th>
                                 <th>Date</th>
+                                <th>Send By</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -115,13 +106,11 @@ $this->title = Yii::t("app", "Admin | Chat");
                                 <td>#1</td>
                                 <td>#56985</td>
                                 <td>#56985</td>
-                                <td>#56985</td>
-                                <td>John Doe</td>
                                 <td>₹1500.00</td>
                                 <td><span class="badge badge-pill badge-soft-success font-size-12">Paid</span>
                                 </td>
-                                <td>Vendor Name</td>
                                 <td>05/08/2021</td>
+                                <td>You</td>
                                 <td>
                                     <a href="javascript:void(0);"
                                         class="btn p-0 avatar-xs btn-primary waves-effect waves-light">

@@ -17,7 +17,7 @@ class DefaultController extends Controller
      * @return string
      */
 
-     public $layout = '@app/themes/backend/main1';
+     public $layout = '@app/themes/backend/main-layout';
     public function actionIndex()
     {
         $authManager = Yii::$app->authManager;

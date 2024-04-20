@@ -14,7 +14,7 @@ class DefaultController extends Controller
      * @return string
      */
 
-    public $layout = '@app/themes/backend/main';
+    public $layout = '@app/themes/backend/main-layout';
 
     public function actionIndex()
     {

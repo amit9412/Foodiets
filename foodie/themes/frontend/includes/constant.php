@@ -1,0 +1,11 @@
+<?php
+    if(!defined('BASE_URL')){
+        define('BASE_URL','https://foodieits.in/foodieits-html');
+    }
+    if(!defined('IMAGES_URL')){
+        define('IMAGES_URL','https://foodieits.in/foodieits-html/assets/img');
+    }
+    if(!defined('ADMIN_IMAGES_URL')){
+        define('ADMIN_IMAGES_URL','https://foodieits.in/foodieits-html/admin-assets/images');
+    }
+?>

@@ -16,8 +16,7 @@ $this->title = Yii::t("app", "Admin | Chat");
             <h4 class="mb-sm-0 font-size-18">Received Invoice</h4>
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
-                    <li class="breadcrumb-item"><a href="<?= Url::to(['/vendor/dashboard']) ?>">Dashboards</a>
-                    </li>
+                    <li class="breadcrumb-item"><a href="<?php echo BASE_URL ?>/vendor/dashboard.php">Dashboards</a></li>
                     <li class="breadcrumb-item active">Invoice List</li>
                 </ol>
             </div>
@@ -42,7 +41,7 @@ $this->title = Yii::t("app", "Admin | Chat");
                         <th>Payment Status</th>
                         <th>Date</th>
                         <th>Make Payment</th>
-                        <th>Send By Vendor</th>
+                        <th>Send By</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -58,7 +57,7 @@ $this->title = Yii::t("app", "Admin | Chat");
                             <button type="button"
                                 class="btn btn-success w-xs btn-sm waves-effect waves-light">Pay</button>
                         </td>
-                        <td>Vendor Name</td>
+                        <td>Admin</td>
                         <td>
                             <a href="javascript:void(0);"
                                 class="btn p-0 avatar-xs btn-primary waves-effect waves-light">

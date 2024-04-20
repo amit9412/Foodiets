@@ -1,0 +1,170 @@
+@media screen and (min-width: 768px){
+  .prs-0{
+    padding-right: 0px;
+  }
+}
+@media screen and (max-width: 1199px){
+    .container{
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 992px){
+    .pd-sec-50{
+        padding: 30px 0px;
+    }
+    .product-details .reviews-media .reviews-img{
+        max-width: 70px;
+        height: 70px;
+        margin-right: 15px;
+    }
+    .product-box .product-box-txt{
+        margin-bottom: 15px;
+    }
+    .filter-section .filter-left{
+        padding: 12px;
+    }
+}
+@media screen and (max-width: 767px){
+    .pd-sec-50{
+        padding: 25px 0px;
+    }
+    .head-txt h2{
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+    .main-header .navbar-light .navbar-toggler{
+        border-radius: 0px;
+        padding: 4px 8px;
+    }
+    .main-header .top-header .social-icon{
+        justify-content: center;
+    }
+    .banner-section .banner-form .input-group{
+        flex-wrap: wrap;
+    }   
+    .banner-section .banner-form .input-group-prepend{
+        width: 100%;
+        display: block;
+    }
+    .banner-section .banner-text h1{
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    .banner-section .banner-text h1 span{
+        font-size: 15px;
+    }
+    .services-section .services-box{
+        height: 260px;
+    }
+    .services-section .services-box img{
+        object-fit: cover;
+    }
+    .discount-section .discount-txt h2{
+        font-size: 30px;
+    }
+    .discount-section .discount-txt span, .discount-section .discount-txt p{
+        font-size: 14px;
+    }
+    .review-section .review-box .review-img{
+        width: 80px;
+        height: 80px;
+    }
+    .review-section .review-box h2{
+        font-size: 18px;
+    }
+    .review-section .review-box p{
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .why-section .why-box img{
+        width: 50px;
+    }
+    .why-section .why-box h3{
+        font-size: 18px;
+        margin-top: 4px;
+    }
+    .main-header .down-header .navbar-nav .nav-item{
+        margin-bottom: 8px;
+    }
+    .breadcrumb-section h1{
+        font-size: 16px;
+    }
+    .breadcrumb-section .breadcrumb .breadcrumb-item, .breadcrumb-section .breadcrumb .breadcrumb-item a, .breadcrumb-item+.breadcrumb-item::before{
+        font-size: 13px;
+    }
+    .product-box .product-box-txt{
+        padding: 12px;
+    } 
+    .product-box .product-box-txt h3{
+        font-size: 16px;
+    }
+    .product-box .product-box-txt h4{
+        font-size: 14px;
+    }
+    .product-box .product-box-txt ul.rating li em{
+        font-size: 14px;
+    }
+    .product-box .product-box-txt h5{
+        font-size: 16px;
+    }
+    .about-section h2,.form-section h2{
+        font-size: 18px;
+    }
+    .about-section img{
+        margin-top: 15px;
+    }
+    .contact-section h2{
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    .user-left{
+        position: fixed;
+        top: 0px;
+        width: 250px;
+        height: 100%;
+        left: -100%;
+        transition: all 0.3s ease-in-out;
+        z-index: 6;
+        background-color: #fff;
+        padding: 20px 0px;
+    }
+    .moreShow{
+        position: fixed!important;
+        top: 0px!important;
+        width: 250px;
+        height: 100%;
+        left: -100%;
+        transition: all 0.3s ease-in-out;
+        z-index: 6;
+    }
+    .user-left.show,.moreShow.show{
+        left: 0px;
+        transition: all 0.3s ease-in-out;
+    }
+    .bgShow.show{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        transition: all 0.3s ease-in-out;
+        background-color: #000000;
+        opacity: 0.7;
+        z-index: 5;
+    }
+    .user-tabs .nav-pills .nav-link{
+        padding: 4px 8px;
+        font-size: 13px;
+    }
+    .main-header .down-header .dropdown-menu{
+        position: absolute;
+    }
+}
+
+@media screen and (max-width: 575px){
+    .banner-section .banner-form .input-group-box{
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

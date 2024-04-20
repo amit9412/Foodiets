@@ -5,7 +5,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\Url;
 
-$this->title = Yii::t("app","Admin | Chat");
+$this->title = Yii::t("app", "Admin | Chat");
 
 ?>
 
@@ -16,8 +16,7 @@ $this->title = Yii::t("app","Admin | Chat");
             <h4 class="mb-sm-0 font-size-18">Chat</h4>
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
-                    <li class="breadcrumb-item"><a href="<?= Url::to(['/vendor/dashboard']) ?>">Dashboards</a>
-                    </li>
+                    <li class="breadcrumb-item"><a href="<?php echo BASE_URL ?>/vendor/dashboard.php">Dashboards</a></li>
                     <li class="breadcrumb-item active">Chat</li>
                 </ol>
             </div>
@@ -31,7 +30,7 @@ $this->title = Yii::t("app","Admin | Chat");
             <div class="py-3 border-bottom">
                 <div class="media align-items-center">
                     <div class="align-self-center me-3">
-                        <img src="<?= Yii::getAlias('@web') ?>/themes/backend/admin-assets/images/avatar-1.jpg" class="avatar-xs rounded-circle" alt="">
+                        <img src="<?php echo ADMIN_IMAGES_URL ?>/avatar-1.jpg" class="avatar-xs rounded-circle" alt="">
                     </div>
                     <div class="media-body">
                         <h5 class="font-size-15 mt-0 mb-1">Henry Wells</h5>
@@ -47,45 +46,148 @@ $this->title = Yii::t("app","Admin | Chat");
             </div>
 
             <div class="chat-leftsidebar-nav">
-                <ul class="list-unstyled chat-list" data-simplebar style="max-height: 410px;">
-                    <li class="active">
-                        <a href="javascript:void(0);">
-                            <div class="media">
-
-                                <div class="align-self-center me-3">
-                                    <img src="<?= Yii::getAlias('@web') ?>/themes/backend/admin-assets/images/avatar-2.jpg"
-                                        class="rounded-circle avatar-xs" alt="">
-                                </div>
-
-                                <div class="media-body overflow-hidden">
-                                    <h5 class="text-truncate font-size-14 mb-1">Steven
-                                        Franklin</h5>
-                                    <p class="text-truncate mb-0">Hey! there I'm
-                                        available</p>
-                                </div>
-                                <div class="font-size-11">05 min</div>
-                            </div>
+                <ul class="nav nav-pills nav-justified">
+                    <li class="nav-item">
+                        <a href="#chat" data-bs-toggle="tab" aria-expanded="true" class="nav-link active">
+                            <i class="bx bx-chat font-size-20 d-sm-none"></i>
+                            <span class="d-none d-sm-block">Chat</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="javascript:void(0);">
-                            <div class="media">
-
-                                <div class="align-self-center me-3">
-                                    <img src="<?= Yii::getAlias('@web') ?>/themes/backend/admin-assets/images/avatar-3.jpg"
-                                        class="rounded-circle avatar-xs" alt="">
-                                </div>
-                                <div class="media-body overflow-hidden">
-                                    <h5 class="text-truncate font-size-14 mb-1">Adam
-                                        Miller</h5>
-                                    <p class="text-truncate mb-0">I've finished it! See
-                                        you so</p>
-                                </div>
-                                <div class="font-size-11">12 min</div>
-                            </div>
+                    <li class="nav-item">
+                        <a href="#groups" data-bs-toggle="tab" aria-expanded="false" class="nav-link">
+                            <i class="bx bx-group font-size-20 d-sm-none"></i>
+                            <span class="d-none d-sm-block">Groups</span>
                         </a>
                     </li>
                 </ul>
+                <div class="tab-content py-3">
+                    <div class="tab-pane show active" id="chat">
+                        <div>
+                            <ul class="list-unstyled chat-list" data-simplebar style="max-height: 410px;">
+                                <li class="active">
+                                    <a href="javascript:void(0);">
+                                        <div class="media">
+
+                                            <div class="align-self-center me-3">
+                                                <img src="<?php echo ADMIN_IMAGES_URL ?>/avatar-2.jpg"
+                                                    class="rounded-circle avatar-xs" alt="">
+                                            </div>
+
+                                            <div class="media-body overflow-hidden">
+                                                <h5 class="text-truncate font-size-14 mb-1">Steven
+                                                    Franklin</h5>
+                                                <p class="text-truncate mb-0">Hey! there I'm
+                                                    available</p>
+                                            </div>
+                                            <div class="font-size-11">05 min</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <div class="media">
+
+                                            <div class="align-self-center me-3">
+                                                <img src="<?php echo ADMIN_IMAGES_URL ?>/avatar-3.jpg"
+                                                    class="rounded-circle avatar-xs" alt="">
+                                            </div>
+                                            <div class="media-body overflow-hidden">
+                                                <h5 class="text-truncate font-size-14 mb-1">Adam
+                                                    Miller</h5>
+                                                <p class="text-truncate mb-0">I've finished it! See
+                                                    you so</p>
+                                            </div>
+                                            <div class="font-size-11">12 min</div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="groups">
+                        <ul class="list-unstyled chat-list" data-simplebar style="max-height: 410px;">
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <div class="media align-items-center">
+                                        <div class="avatar-xs me-3">
+                                            <span class="avatar-title rounded-circle bg-primary bg-soft text-primary">
+                                                G
+                                            </span>
+                                        </div>
+
+                                        <div class="media-body">
+                                            <h5 class="font-size-14 mb-0">General</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <div class="media align-items-center">
+                                        <div class="avatar-xs me-3">
+                                            <span class="avatar-title rounded-circle bg-primary bg-soft text-primary">
+                                                R
+                                            </span>
+                                        </div>
+
+                                        <div class="media-body">
+                                            <h5 class="font-size-14 mb-0">Reporting</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <div class="media align-items-center">
+                                        <div class="avatar-xs me-3">
+                                            <span class="avatar-title rounded-circle bg-primary bg-soft text-primary">
+                                                M
+                                            </span>
+                                        </div>
+
+                                        <div class="media-body">
+                                            <h5 class="font-size-14 mb-0">Meeting</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <div class="media align-items-center">
+                                        <div class="avatar-xs me-3">
+                                            <span class="avatar-title rounded-circle bg-primary bg-soft text-primary">
+                                                A
+                                            </span>
+                                        </div>
+
+                                        <div class="media-body">
+                                            <h5 class="font-size-14 mb-0">Project A</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <div class="media align-items-center">
+                                        <div class="avatar-xs me-3">
+                                            <span class="avatar-title rounded-circle bg-primary bg-soft text-primary">
+                                                B
+                                            </span>
+                                        </div>
+
+                                        <div class="media-body">
+                                            <h5 class="font-size-14 mb-0">Project B</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
 
@@ -262,7 +364,7 @@ $this->title = Yii::t("app","Admin | Chat");
                         </div>
                         <div class="col-md-3 text-end">
                             <button type="submit"
-                                class="btn btn-primary btn-block btn-rounded chat-send w-md waves-effect waves-light"><span
+                                class="btn btn-primary btn-rounded chat-send w-md waves-effect waves-light"><span
                                     class="d-none d-sm-inline-block me-2">Send</span> <i
                                     class="mdi mdi-send"></i></button>
                         </div>

@@ -12,7 +12,7 @@ use yii\filters\VerbFilter;
  */
 class CustomerController extends Controller
 {
-    public $layout = '@app/themes/backend/main';
+    public $layout = '@app/themes/backend/main-layout';
     /**
      * @inheritDoc
      */

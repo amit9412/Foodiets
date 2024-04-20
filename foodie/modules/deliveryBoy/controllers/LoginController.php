@@ -1,6 +1,6 @@
 <?php
 
-namespace app\modules\deliveryBoy\controllers;
+namespace app\modules\superAdmin\controllers;
 
 use app\models\Vendor;
 use yii\web\Controller;

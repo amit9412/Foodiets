@@ -59,10 +59,6 @@ $config = [
                 'superAdmin' => 'super-admin'
             ],
         ],
-        'authManager' => [
-            'class' => 'yii\rbac\DbManager',
-            // 'defaultRoles' => ['user'],
-        ],
     ],
     'params' => $params,
 ];

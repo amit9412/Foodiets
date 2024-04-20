@@ -14,7 +14,7 @@ use yii\helpers\Url;
  */
 class ReportController extends Controller
 {
-    public $layout = '@app/themes/backend/main';
+    public $layout = '@app/themes/backend/main-layout';
     /**
      * @inheritDoc
      */

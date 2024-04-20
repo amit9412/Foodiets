@@ -1,55 +1,50 @@
 <?php
 
+use yii\helpers\Url;
+
 /** @var yii\web\View $this */
-/** @var yii\bootstrap5\ActiveForm $form */
 
-/** @var app\models\LoginForm $model */
-
-use yii\bootstrap5\ActiveForm;
-use yii\bootstrap5\Html;
 
 $this->title = 'Login';
-$this->params['breadcrumbs'][] = $this->title;
+
 ?>
-<div class="site-login">
-    <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>Please fill out the following fields to login:</p>
-
-    <div class="row">
-        <div class="col-lg-5">
-
-            <?php $form = ActiveForm::begin([
-                'id' => 'login-form',
-                'fieldConfig' => [
-                    'template' => "{label}\n{input}\n{error}",
-                    'labelOptions' => ['class' => 'col-lg-1 col-form-label mr-lg-3'],
-                    'inputOptions' => ['class' => 'col-lg-3 form-control'],
-                    'errorOptions' => ['class' => 'col-lg-7 invalid-feedback'],
-                ],
-            ]); ?>
-
-            <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
-
-            <?= $form->field($model, 'password')->passwordInput() ?>
-
-            <?= $form->field($model, 'rememberMe')->checkbox([
-                'template' => "<div class=\"custom-control custom-checkbox\">{input} {label}</div>\n<div class=\"col-lg-8\">{error}</div>",
-            ]) ?>
-
-            <div class="form-group">
-                <div>
-                    <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
-                </div>
-            </div>
-
-            <?php ActiveForm::end(); ?>
-
-            <div style="color:#999;">
-                You may login with <strong>admin/admin</strong> or <strong>demo/demo</strong>.<br>
-                To modify the username/password, please check out the code <code>app\models\User::$users</code>.
-            </div>
-
+<section class="breadcrumb-section light-bg">
+    <div class="container">
+        <div class="breadcrumb-text">
+            <h1>Login</h1>
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="<?= Url::to(['site/login']) ?>">Home</a></li>
+                    <li class="breadcrumb-item active">Login</li>
+                </ol>
+            </nav>
         </div>
     </div>
-</div>
+</section>
+<section class="form-section pd-sec-50">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 col-sm-8">
+                <h2>Welcome Back !</h2>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Enter Mobile Number">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Enter Password">
+                    </div>
+                    <div class="form-group text-right">
+                        <a href="<?= Url::to(['site/forgot-password']) ?>" class="forgot-txt">Forgot Password?</a>
+                    </div>
+                    <div class="form-group">
+                        <a href="<?= Url::to(['site/user']) ?>" class="btn btn-block btn-primary">Login</a>
+                    </div>
+                    <p class="rgstr-txt text-center">Don't have an account?
+                        <a href="<?= Url::to(['site/signup']) ?>">Register</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
