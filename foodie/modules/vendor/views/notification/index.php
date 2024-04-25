@@ -5,7 +5,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\Url;
 
-$this->title = Yii::t("app", "Admin | Notification");
+$this->title = Yii::t("app", "Vendor | Notification");
 
 ?>
 <!-- Breadcrumb Start-->
@@ -15,7 +15,7 @@ $this->title = Yii::t("app", "Admin | Notification");
             <h4 class="mb-sm-0 font-size-18">Notification List</h4>
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
-                    <li class="breadcrumb-item"><a href="<?php echo BASE_URL ?>/vendor/dashboard.php">Dashboards</a></li>
+                    <li class="breadcrumb-item"><a href="<?= Url::to(['/vendor/dashboard']) ?>">Dashboard</a></li>
                     <li class="breadcrumb-item active">List</li>
                 </ol>
             </div>

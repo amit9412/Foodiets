@@ -5,7 +5,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\Url;
 
-$this->title = Yii::t("app", "Admin | Chat");
+$this->title = Yii::t("app", "Vendor | Invoice");
 
 ?>
 

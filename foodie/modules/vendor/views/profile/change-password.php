@@ -5,7 +5,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\Url;
 
-$this->title = Yii::t("app", "Admin | Login");
+$this->title = Yii::t("app", "Vendor | Change Password");
 
 ?>
 
@@ -34,7 +34,7 @@ $this->title = Yii::t("app", "Admin | Login");
                                     <input type="password" class="form-control" id="confirmpwd" placeholder="Enter confirm password">
                                 </div>           
                                 <div class="text-end">
-                                    <a href="<?php echo BASE_URL ?>/vendor/dashboard.php" class="btn btn-primary w-md waves-effect waves-light"> Change</a>
+                                    <a href="<?= Url::to(['/vendor/dashboard']) ?>" class="btn btn-primary w-md waves-effect waves-light"> Change</a>
                                 </div>
                                 <div class="mt-4 text-center">
                                     <span class="text-muted">

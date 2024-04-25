@@ -5,7 +5,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\Url;
 
-$this->title = Yii::t("app", "Admin | Login");
+$this->title = Yii::t("app", "Vendor | Login");
 
 ?>
 
@@ -26,7 +26,7 @@ $this->title = Yii::t("app", "Admin | Login");
                         <input type="email" class="form-control" id="useremail" placeholder="Enter email/mobile">
                     </div>
                     <div class="text-end">
-                        <a href="<?php echo BASE_URL ?>/vendor/dashboard.php"
+                        <a href="<?= Url::to(['/vendor/dashboard']) ?>"
                             class="btn btn-success w-md waves-effect waves-light"> Reset</a>
                     </div>
                     <div class="mt-4 text-center">

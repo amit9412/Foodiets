@@ -6,7 +6,7 @@
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a
-                                                href="<?php echo BASE_URL?>/vendor/dashboard.php">Dashboards</a></li>
+                                                href="<?= Url::to(['/vendor/dashboard']) ?>">Dashboards</a></li>
                                         <li class="breadcrumb-item active">Invoice List</li>
                                     </ol>
                                 </div>
