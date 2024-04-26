@@ -3,7 +3,7 @@
 namespace app\modules\vendor;
 
 /**
- * vendor module definition class
+ * vendor-panel module definition class
  */
 class Module extends \yii\base\Module
 {

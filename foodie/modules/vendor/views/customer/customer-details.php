@@ -17,8 +17,8 @@ $this->title = Yii::t("app", "Vendor | Customers");
             <h4 class="mb-sm-0 font-size-18">Customer Details</h4>
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
-                    <li class="breadcrumb-item"><a href="<?= Url::to(['/vendor/dashboard']) ?>">Dashboards</a></li>
-                    <li class="breadcrumb-item"><a href="<?php echo BASE_URL ?>/vendor/new-order.php">New Order</a></li>
+                    <li class="breadcrumb-item"><a href="<?= Url::to(['/vendor-panel/dashboard']) ?>">Dashboards</a></li>
+                    <li class="breadcrumb-item"><a href="<?=Url::to(['/vendor-panel/order/new-order'])?>">New Order</a></li>
                     <li class="breadcrumb-item active">Details</li>
                 </ol>
             </div>
@@ -31,7 +31,7 @@ $this->title = Yii::t("app", "Vendor | Customers");
         <div class="card">
             <div class="card-body">
                 <div class="media mb-3">
-                    <img src="<?php echo ADMIN_IMAGES_URL ?>/avatar-2.jpg" alt="" class="avatar-sm rounded-circle me-3">
+                    <img src="<?= Yii::getAlias('@web') ?>/themes/backend/admin-assets/images/avatar-2.jpg" alt="" class="avatar-sm rounded-circle me-3">
                     <div class="media-body overflow-hidden">
                         <h5 class="text-truncate font-size-15 mb-1">John Doe</h5>
                         <p class="text-muted mb-0">john.doe@gmail.com</p>

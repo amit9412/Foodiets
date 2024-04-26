@@ -33,7 +33,7 @@ class LoginController extends Controller
                         'roles' => ['delivery-boy'], // '@' All logged in users / or your access role e.g. 'admin', 'user'
                     ],
                     [
-                        'allow' => false, // Do not have access
+                        'allow' => true, // Do not have access
                         'roles' => ['?'], // Guests '?'
                     ],
                 ],
@@ -57,7 +57,7 @@ class LoginController extends Controller
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             // return $this->goBack();
-            return $this->redirect(Url::to(['/delivery-boy/order/today-order']));
+            return $this->redirect(Url::to(['/deliveryboy-panel/order/today-order']));
         }
 
         //$model->password = '';

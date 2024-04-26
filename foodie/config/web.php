@@ -12,9 +12,9 @@ $config = [
         '@npm'   => '@vendor/npm-asset',
     ],
     'modules' => [
-        'super-admin' => ['class' => 'app\modules\superAdmin\Module',],
-        'delivery-boy' => ['class' => 'app\modules\deliveryBoy\Module',],
-        'vendor' => ['class' => 'app\modules\vendor\Module',],
+        'superadmin-panel' => ['class' => 'app\modules\superAdmin\Module',],
+        'deliveryboy-panel' => ['class' => 'app\modules\deliveryBoy\Module',],
+        'vendor-panel' => ['class' => 'app\modules\vendor\Module',],
     ],
     'components' => [
         'pusher' => [

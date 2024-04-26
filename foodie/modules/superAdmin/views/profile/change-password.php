@@ -34,12 +34,12 @@ $this->title = Yii::t("app", "Admin | Login");
                             placeholder="Enter confirm password">
                     </div>
                     <div class="text-end">
-                        <a href="<?= Url::to(['/super-admin/dashboard']) ?>"
+                        <a href="<?= Url::to(['/superadmin-panel/dashboard']) ?>"
                             class="btn btn-primary w-md waves-effect waves-light"> Change</a>
                     </div>
                     <div class="mt-4 text-center">
                         <span class="text-muted">
-                            Back <a href="<?= Url::to(['/super-admin/login']) ?>" class="fw-medium text-primary"> Click
+                            Back <a href="<?= Url::to(['/superadmin-panel/login']) ?>" class="fw-medium text-primary"> Click
                                 here</a>
                         </span>
                     </div>

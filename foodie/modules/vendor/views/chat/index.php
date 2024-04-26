@@ -16,7 +16,7 @@ $this->title = Yii::t("app", "Vendor | Chat");
             <h4 class="mb-sm-0 font-size-18">Chat</h4>
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
-                    <li class="breadcrumb-item"><a href="<?= Url::to(['/vendor/dashboard']) ?>">Dashboards</a></li>
+                    <li class="breadcrumb-item"><a href="<?= Url::to(['/vendor-panel/dashboard']) ?>">Dashboards</a></li>
                     <li class="breadcrumb-item active">Chat</li>
                 </ol>
             </div>
@@ -30,7 +30,7 @@ $this->title = Yii::t("app", "Vendor | Chat");
             <div class="py-3 border-bottom">
                 <div class="media align-items-center">
                     <div class="align-self-center me-3">
-                        <img src="<?php echo ADMIN_IMAGES_URL ?>/avatar-1.jpg" class="avatar-xs rounded-circle" alt="">
+                        <img src="<?= Yii::getAlias('@web') ?>/themes/backend/admin-assets/images/avatar-1.jpg" class="avatar-xs rounded-circle" alt="">
                     </div>
                     <div class="media-body">
                         <h5 class="font-size-15 mt-0 mb-1">Henry Wells</h5>
@@ -69,7 +69,7 @@ $this->title = Yii::t("app", "Vendor | Chat");
                                         <div class="media">
 
                                             <div class="align-self-center me-3">
-                                                <img src="<?php echo ADMIN_IMAGES_URL ?>/avatar-2.jpg"
+                                                <img src="<?= Yii::getAlias('@web') ?>/themes/backend/admin-assets/images/avatar-2.jpg"
                                                     class="rounded-circle avatar-xs" alt="">
                                             </div>
 
@@ -88,7 +88,7 @@ $this->title = Yii::t("app", "Vendor | Chat");
                                         <div class="media">
 
                                             <div class="align-self-center me-3">
-                                                <img src="<?php echo ADMIN_IMAGES_URL ?>/avatar-3.jpg"
+                                                <img src="<?= Yii::getAlias('@web') ?>/themes/backend/admin-assets/images/avatar-3.jpg"
                                                     class="rounded-circle avatar-xs" alt="">
                                             </div>
                                             <div class="media-body overflow-hidden">

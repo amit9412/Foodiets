@@ -70,6 +70,36 @@ class InvoiceController extends Controller
         ]);
     }
 
+    public function actionPendingInvoice()
+    {
+        $model = new Vendor();
+        $modelData = $model->find()->all();
+
+        return $this->render('pending-invoice', [
+            'model' => $modelData,
+        ]);
+    }
+
+    public function actionInvoiceDetails()
+    {
+        $model = new Vendor();
+        $modelData = $model->find()->all();
+
+        return $this->render('invoice-details', [
+            'model' => $modelData,
+        ]);
+    }
+
+    public function actionCompleteInvoice()
+    {
+        $model = new Vendor();
+        $modelData = $model->find()->all();
+
+        return $this->render('complete-invoice', [
+            'model' => $modelData,
+        ]);
+    }
+
     /**
      * Displays a single Vendor model.
      * @param int $id ID

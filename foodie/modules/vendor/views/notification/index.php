@@ -15,7 +15,7 @@ $this->title = Yii::t("app", "Vendor | Notification");
             <h4 class="mb-sm-0 font-size-18">Notification List</h4>
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
-                    <li class="breadcrumb-item"><a href="<?= Url::to(['/vendor/dashboard']) ?>">Dashboard</a></li>
+                    <li class="breadcrumb-item"><a href="<?= Url::to(['/vendor-panel/dashboard']) ?>">Dashboard</a></li>
                     <li class="breadcrumb-item active">List</li>
                 </ol>
             </div>

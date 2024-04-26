@@ -32,16 +32,16 @@ $this->title = Yii::t("app", "Vendor | Login");
                         </div>
                     </div>
                     <div class="text-end">
-                        <a href="<?= Url::to(['vendor/forgot-password']) ?>"
+                        <a href="<?= Url::to(['vendor-panel/forgot-password']) ?>"
                             class="text-muted"><i class="mdi mdi-lock me-1"></i> Forgot your password?</a>
                     </div>
                     <div class="mt-3 d-grid">
-                        <a href="<?= Url::to(['vendor/dashboard']) ?>"
+                        <a href="<?= Url::to(['vendor-panel/dashboard']) ?>"
                             class="btn btn-success waves-effect waves-light"> Log In</a>
                     </div>
                     <div class="mt-4 text-center">
                         <span class="text-muted">Don't have an account? <a
-                                href="<?= Url::to(['vendor/register']) ?>/vendor/register.php" class="fw-medium text-dark">
+                                href="<?= Url::to(['vendor-panel/register']) ?>/vendor/register.php" class="fw-medium text-dark">
                                 Register</a>
                         </span>
                     </div>
@@ -58,7 +58,7 @@ $this->title = Yii::t("app", "Vendor | Login");
                 </div>
 
                 <div class="text-end">
-                    <a href="<?= Url::to(['/vendor/forgot-password']) ?>" class="text-muted"><i class="mdi mdi-lock me-1"></i>
+                    <a href="<?= Url::to(['/vendor-panel/forgot-password']) ?>" class="text-muted"><i class="mdi mdi-lock me-1"></i>
                         Forgot your password?</a>
                 </div>
 
@@ -68,7 +68,7 @@ $this->title = Yii::t("app", "Vendor | Login");
 
                     <div class="mt-4 text-center">
                         <span class="text-muted">Don't have an account? <a
-                                href="<?= Url::to(['vendor/register']) ?>" class="fw-medium text-dark">
+                                href="<?= Url::to(['vendor-panel/register']) ?>" class="fw-medium text-dark">
                                 Register</a>
                         </span>
                     </div>

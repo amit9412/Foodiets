@@ -35,11 +35,11 @@ use yii\helpers\Url;
 
 $userRole = (\Yii::$app->user->identity) ? \Yii::$app->user->identity->user_role : 'undefined';
 if ($userRole == 'super-admin') {
-    $main_url = Url::to(['/super-admin/dashboard']);
+    $main_url = Url::to(['/superadmin-panel/dashboard']);
 } else if ($userRole == 'vendor') {
-    $main_url = Url::to(['/vendor/dashboard']);
+    $main_url = Url::to(['/vendor-panel/dashboard']);
 } else if ($userRole == 'delivery-boy') {
-    $main_url = Url::to(['/delivery-boy/order/today-order']);
+    $main_url = Url::to(['/deliveryboy-panel/order/today-order']);
 } else {
     $main_url = '';
 }
@@ -198,14 +198,14 @@ if ($userRole == 'super-admin') {
                     <?php if ($userRole == 'super-admin') { ?>
 
                         <!-- super admin -->
-                        <a class="dropdown-item" href="<?= Url::to(['/super-admin/profile']) ?>">
+                        <a class="dropdown-item" href="<?= Url::to(['/superadmin-panel/profile']) ?>">
                             <i class="bx bx-user font-size-16 align-middle me-1"></i> <span key="t-profile">Profile</span>
                         </a>
-                        <a class="dropdown-item" href="<?= Url::to(['/super-admin/profile/change-password']) ?>">
+                        <a class="dropdown-item" href="<?= Url::to(['/superadmin-panel/profile/change-password']) ?>">
                             <i class="bx bx-lock-open font-size-16 align-middle me-1"></i> <span key="t-lock-screen">Change
                                 Password</span>
                         </a>
-                        <a class="dropdown-item text-danger" href="<?= Url::to(['/super-admin/profile/logout']) ?>">
+                        <a class="dropdown-item text-danger" href="<?= Url::to(['/superadmin-panel/profile/logout']) ?>">
                             <i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span
                                 key="t-logout">Logout</span>
                         </a>
@@ -215,18 +215,18 @@ if ($userRole == 'super-admin') {
 
                     <?php if ($userRole == 'vendor') { ?>
                         <!-- vendor -->
-                        <a class="dropdown-item" href="<?= Url::to(['/vendor/profile']) ?>">
+                        <a class="dropdown-item" href="<?= Url::to(['/vendor-panel/profile']) ?>">
                             <i class="bx bx-user font-size-16 align-middle me-1"></i> <span key="t-profile">Profile</span>
                         </a>
-                        <a class="dropdown-item" href="<?= Url::to(['/vendor/profile/edit-profile']) ?>">
+                        <a class="dropdown-item" href="<?= Url::to(['/vendor-panel/profile/edit-profile']) ?>">
                             <i class="bx bx-edit font-size-16 align-middle me-1"></i> <span key="t-edit-profile">Edit
                                 Profile</span>
                         </a>
-                        <a class="dropdown-item" href="<?= Url::to(['/vendor/profile/change-password']) ?>">
+                        <a class="dropdown-item" href="<?= Url::to(['/vendor-panel/profile/change-password']) ?>">
                             <i class="bx bx-lock-open font-size-16 align-middle me-1"></i> <span key="t-lock-screen">Change
                                 Password</span>
                         </a>
-                        <a class="dropdown-item text-danger" href="<?= Url::to(['/vendor/profile/logout']) ?>">
+                        <a class="dropdown-item text-danger" href="<?= Url::to(['/vendor-panel/profile/logout']) ?>">
                             <i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span
                                 key="t-logout">Logout</span>
                         </a>
@@ -234,14 +234,14 @@ if ($userRole == 'super-admin') {
 
                     <?php if ($userRole == 'delivery-boy') { ?>
                         <!-- delivery boy -->
-                        <a class="dropdown-item" href="<?= Url::to(['/delivery-boy/profile']) ?>">
+                        <a class="dropdown-item" href="<?= Url::to(['/deliveryboy-panel/profile']) ?>">
                             <i class="bx bx-user font-size-16 align-middle me-1"></i> <span key="t-profile">Profile</span>
                         </a>
-                        <a class="dropdown-item" href="<?= Url::to(['/delivery-boy/profile/change-password']) ?>">
+                        <a class="dropdown-item" href="<?= Url::to(['/deliveryboy-panel/profile/change-password']) ?>">
                             <i class="bx bx-lock-open font-size-16 align-middle me-1"></i> <span key="t-lock-screen">Change
                                 Password</span>
                         </a>
-                        <a class="dropdown-item text-danger" href="<?= Url::to(['/delivery-boy/profile/logout']) ?>">
+                        <a class="dropdown-item text-danger" href="<?= Url::to(['/deliveryboy-panel/profile/logout']) ?>">
                             <i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span
                                 key="t-logout">Logout</span>
                         </a>
