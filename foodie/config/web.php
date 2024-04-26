@@ -17,6 +17,13 @@ $config = [
         'vendor' => ['class' => 'app\modules\vendor\Module',],
     ],
     'components' => [
+        'pusher' => [
+            'class' => '\Pusher\Pusher', 
+            'appId' => '1793288',
+            'appKey' => 'df096bf422e35a5303e1',
+            'appSecret' => '383ae8d8361614ae7304',
+            'options' => ['cluster' => 'ap2', 'useTLS' => true] 
+       ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'il1gGh8NvtGr9dutXFUxEeCgt48eJ1UA',
