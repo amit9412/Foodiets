@@ -26,12 +26,12 @@ $this->title = Yii::t("app", "Vendor | Login");
                         <input type="email" class="form-control" id="useremail" placeholder="Enter email/mobile">
                     </div>
                     <div class="text-end">
-                        <a href="<?= Url::to(['/vendor/dashboard']) ?>"
+                        <a href="<?= Url::to(['/vendor-panel/dashboard']) ?>"
                             class="btn btn-success w-md waves-effect waves-light"> Reset</a>
                     </div>
                     <div class="mt-4 text-center">
                         <span class="text-muted">
-                            Remember It ? <a href="<?php echo BASE_URL ?>/vendor/index.php" class="fw-medium text-dark">
+                            Remember It ? <a href="<?php echo BASE_URL ?>/vendor-panel/index.php" class="fw-medium text-dark">
                                 Login Here</a>
                         </span>
                     </div>

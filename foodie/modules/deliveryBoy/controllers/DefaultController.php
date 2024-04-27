@@ -9,7 +9,7 @@ use yii\helpers\Url;
 use Yii;
 
 /**
- * Default controller for the `delivery-boy` module
+ * Default controller for the `deliveryboy-panel` module
  */
 class DefaultController extends Controller
 {
@@ -32,7 +32,7 @@ class DefaultController extends Controller
                     [
                         //'actions' => ['login', 'error'], // Define specific actions
                         'allow' => true, // Has access
-                        'roles' => ['super-admin'], // '@' All logged in users / or your access role e.g. 'admin', 'user'
+                        'roles' => ['delivery-boy'], // '@' All logged in users / or your access role e.g. 'admin', 'user'
                     ],
                     [
                         'allow' => true, // Do not have access
@@ -55,7 +55,7 @@ class DefaultController extends Controller
         if ($authManager->checkAccess(Yii::$app->user->id, 'delivery-boy')) {
             return $this->redirect(Url::to(['order/today-order']));
         } else {
-            return $this->redirect(Url::to(['login/']));
+            return $this->redirect(Url::to(['/login']));
         }
     }
 }

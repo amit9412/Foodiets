@@ -58,7 +58,7 @@ use yii\helpers\Url;
                                     </div>
                                 </td>
                                 <td>
-                                    <a href="<?= Url::to(['/admin/customer/view', 'id' => $singleValue->id]) ?>" class="btn p-0 avatar-xs btn-primary waves-effect waves-light">
+                                    <a href="<?= Url::to(['/superadmin-panel/vendor/vendor-details', 'id' => $singleValue->id]) ?>" class="btn p-0 avatar-xs btn-primary waves-effect waves-light">
                                         <i class="bx bx-list-ul mt-2 font-size-15 align-middle"></i>
                                     </a>
                                 </td>

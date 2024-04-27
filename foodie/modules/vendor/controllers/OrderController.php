@@ -7,15 +7,17 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use yii\helpers\Url;
 use app\models\LoginForm;
+use Yii;
 
 
 /**
- * ChangePasswordController implements the CRUD actions for Vendor model.
+ * OrderController implements the CRUD actions for Vendor model.
  */
-class ChangePasswordController extends Controller
+class OrderController extends Controller
 {
-    public $layout = '@app/themes/backend/login-layout';
+    public $layout = '@app/themes/backend/main-layout';
     /**
      * @inheritDoc
      */
@@ -50,36 +52,32 @@ class ChangePasswordController extends Controller
      *
      * @return string
      */
-    public function actionIndex()
+    public function actionNewOrder()
     {
-        // $model = new Login();
-        
-        // return $this->render('index', [
-        //     'model' => $modelData,
-        // ]);
-
-        // if (!Yii::$app->user->isGuest) {
-        //     return $this->goHome();
-        // }
-
-        $model = new LoginForm();
-        // if ($model->load(Yii::$app->request->post()) && $model->login()) {
-        //     return $this->goBack();
-        // }
-
-        //$model->password = '';
-        return $this->render('index', [
-            'model' => $model,
-        ]);
+        return $this->render('new-order');
     }
 
     /**
-     * Finds the Vendor model based on its primary key value.
-     * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param int $id ID
-     * @return Vendor the loaded model
-     * @throws NotFoundHttpException if the model cannot be found
+     * Lists all Vendor models.
+     *
+     * @return string
      */
+    public function actionTotalOrder()
+    {
+        return $this->render('total-order');
+    }
+
+    /**
+     * Lists all Vendor models.
+     *
+     * @return string
+     */
+    public function actionTodayOrder()
+    {
+        return $this->render('today-order');
+    }
+
+
     protected function findModel($id)
     {
         if (($model = Vendor::findOne(['id' => $id])) !== null) {

@@ -1,21 +1,23 @@
 <?php
 
-namespace app\modules\superAdmin\controllers;
+namespace app\modules\vendor\controllers;
 
 use app\models\Vendor;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use yii\helpers\Url;
 use app\models\LoginForm;
+use Yii;
 
 
 /**
- * ChangePasswordController implements the CRUD actions for Vendor model.
+ * GroupController implements the CRUD actions for Vendor model.
  */
-class ChangePasswordController extends Controller
+class GroupController extends Controller
 {
-    public $layout = '@app/themes/backend/login-layout';
+    public $layout = '@app/themes/backend/main-layout';
     /**
      * @inheritDoc
      */
@@ -28,7 +30,7 @@ class ChangePasswordController extends Controller
                     [
                         //'actions' => ['login', 'error'], // Define specific actions
                         'allow' => true, // Has access
-                        'roles' => ['super-admin'], // '@' All logged in users / or your access role e.g. 'admin', 'user'
+                        'roles' => ['vendor'], // '@' All logged in users / or your access role e.g. 'admin', 'user'
                     ],
                     [
                         'allow' => false, // Do not have access
@@ -50,36 +52,21 @@ class ChangePasswordController extends Controller
      *
      * @return string
      */
-    public function actionIndex()
+    public function actionAddGroup()
     {
-        // $model = new Login();
-        
-        // return $this->render('index', [
-        //     'model' => $modelData,
-        // ]);
-
-        // if (!Yii::$app->user->isGuest) {
-        //     return $this->goHome();
-        // }
-
-        $model = new LoginForm();
-        // if ($model->load(Yii::$app->request->post()) && $model->login()) {
-        //     return $this->goBack();
-        // }
-
-        //$model->password = '';
-        return $this->render('index', [
-            'model' => $model,
-        ]);
+        return $this->render('add-group');
     }
 
     /**
-     * Finds the Vendor model based on its primary key value.
-     * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param int $id ID
-     * @return Vendor the loaded model
-     * @throws NotFoundHttpException if the model cannot be found
+     * Lists all Vendor models.
+     *
+     * @return string
      */
+    public function actionGroupCustomerList()
+    {
+        return $this->render('group-customer-list');
+    }
+
     protected function findModel($id)
     {
         if (($model = Vendor::findOne(['id' => $id])) !== null) {

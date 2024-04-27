@@ -73,6 +73,13 @@ class VendorController extends Controller
         ]);
     }
 
+    public function actionVendorDetails($id)
+    {
+        return $this->render('vendor-details', [
+            'model' => $this->findModel($id),
+        ]);
+    }
+
     /**
      * Creates a new Vendor model.
      * If creation is successful, the browser will be redirected to the 'view' page.

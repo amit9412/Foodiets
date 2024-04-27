@@ -26,12 +26,12 @@ $this->title = Yii::t("app", "Admin | Login");
                         <input type="email" class="form-control" id="useremail" placeholder="Enter email/mobile">
                     </div>
                     <div class="text-end">
-                        <a href="<?= Url::to(['/super-admin/dashboard']) ?>"
+                        <a href="<?= Url::to(['/superadmin-panel/dashboard']) ?>"
                             class="btn btn-success w-md waves-effect waves-light"> Reset</a>
                     </div>
                     <div class="mt-4 text-center">
                         <span class="text-muted">
-                            Remember It ? <a href="<?= Url::to(['/super-admin/login']) ?>"
+                            Remember It ? <a href="<?= Url::to(['/superadmin-panel/login']) ?>"
                                 class="fw-medium text-dark"> Login Here</a>
                         </span>
                     </div>

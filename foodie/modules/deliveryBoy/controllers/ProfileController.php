@@ -8,6 +8,7 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use yii\helpers\Url;
+use app\models\LoginForm;
 use Yii;
 
 
@@ -46,15 +47,6 @@ class ProfileController extends Controller
         ];
     }
 
-
-    public function actionLogout()
-    {
-        Yii::$app->user->logout();
-
-        return $this->goHome();
-    }
-
-    
     /**
      * Lists all Vendor models.
      *
@@ -68,6 +60,13 @@ class ProfileController extends Controller
         return $this->render('index', [
             'model' => $modelData,
         ]);
+    }
+
+    public function actionLogout()
+    {
+        Yii::$app->user->logout();
+
+        return $this->goHome();
     }
 
     public function actionReceivedInvoice()
@@ -149,6 +148,35 @@ class ProfileController extends Controller
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
+    }
+
+    public function actionChangePassword()
+    {
+        $this->layout = '@app/themes/backend/login-layout';
+        // $model = new Login();
+        
+        // return $this->render('index', [
+        //     'model' => $modelData,
+        // ]);
+
+        // if (!Yii::$app->user->isGuest) {
+        //     return $this->goHome();
+        // }
+
+        $model = new LoginForm();
+        // if ($model->load(Yii::$app->request->post()) && $model->login()) {
+        //     return $this->goBack();
+        // }
+
+        //$model->password = '';
+        return $this->render('change-password', [
+            'model' => $model,
+        ]);
+    }
+
+    public function actionEditProfile()
+    {
+        return $this->render('edit-profile');
     }
 
     /**

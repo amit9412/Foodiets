@@ -32,11 +32,11 @@ $this->title = Yii::t("app","Admin | Login");
                         </div>
                     </div>
                     <div class="text-end">
-                        <a href="/super-admin/forgot-password.php" class="text-muted"><i class="mdi mdi-lock me-1"></i>
+                        <a href="/superadmin-panel/forgot-password.php" class="text-muted"><i class="mdi mdi-lock me-1"></i>
                             Forgot your password?</a>
                     </div>
                     <div class="mt-3 d-grid">
-                        <a href="/super-admin/dashboard.php" class="btn btn-success waves-effect waves-light"> Log
+                        <a href="/superadmin-panel/dashboard.php" class="btn btn-success waves-effect waves-light"> Log
                             In</a>
                     </div>
                 </form> -->
@@ -55,7 +55,7 @@ $this->title = Yii::t("app","Admin | Login");
                 </div>
 
                 <div class="text-end">
-                    <a href="<?= Url::to(['/super-admin/forgot-password']) ?>" class="text-muted"><i class="mdi mdi-lock me-1"></i>
+                    <a href="<?= Url::to(['/superadmin-panel/forgot-password']) ?>" class="text-muted"><i class="mdi mdi-lock me-1"></i>
                         Forgot your password?</a>
                 </div>
 

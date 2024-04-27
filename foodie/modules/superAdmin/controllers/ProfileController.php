@@ -8,6 +8,7 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use yii\helpers\Url;
+use app\models\LoginForm;
 use Yii;
 
 
@@ -17,7 +18,7 @@ use Yii;
 class ProfileController extends Controller
 {
     public $layout = '@app/themes/backend/main-layout';
-/**
+    /**
      * @inheritDoc
      */
     public function behaviors()
@@ -149,6 +150,31 @@ class ProfileController extends Controller
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
+    }
+
+
+    public function actionChangePassword()
+    {
+        $this->layout = '@app/themes/backend/login-layout';
+        // $model = new Login();
+
+        // return $this->render('index', [
+        //     'model' => $modelData,
+        // ]);
+
+        // if (!Yii::$app->user->isGuest) {
+        //     return $this->goHome();
+        // }
+
+        $model = new LoginForm();
+        // if ($model->load(Yii::$app->request->post()) && $model->login()) {
+        //     return $this->goBack();
+        // }
+
+        //$model->password = '';
+        return $this->render('change-password', [
+            'model' => $model,
+        ]);
     }
 
     /**

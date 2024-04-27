@@ -16,7 +16,7 @@ $this->title = Yii::t("app", "Vendor | Review");
             <h4 class="mb-sm-0 font-size-18">Review List</h4>
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
-                    <li class="breadcrumb-item"><a href="<?= Url::to(['/vendor/dashboard']) ?>">Dashboards</a></li>
+                    <li class="breadcrumb-item"><a href="<?= Url::to(['/vendor-panel/dashboard']) ?>">Dashboards</a></li>
                     <li class="breadcrumb-item active">List</li>
                 </ol>
             </div>
@@ -49,7 +49,7 @@ $this->title = Yii::t("app", "Vendor | Review");
                     <tr>
                         <td>#1</td>
                         <td>
-                            <img src="<?php echo ADMIN_IMAGES_URL ?>/avatar-2.jpg" alt=""
+                            <img src="<?= Yii::getAlias('@web') ?>/themes/backend/admin-assets/images/avatar-2.jpg" alt=""
                                 class="avatar-xs rounded-circle">
                         </td>
                         <td>John Doe</td>

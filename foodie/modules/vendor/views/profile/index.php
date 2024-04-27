@@ -16,7 +16,7 @@ $this->title = Yii::t("app", "Vendor | Profile");
             <h4 class="mb-sm-0 font-size-18">My Profile</h4>
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
-                    <li class="breadcrumb-item"><a href="javascript:void(0);">Dashboards</a></li>
+                    <li class="breadcrumb-item"><a href="<?=Url::to(['/vendor-panel/dashboard'])?>">Dashboards</a></li>
                     <li class="breadcrumb-item active">Profile Details</li>
                 </ol>
             </div>
@@ -82,7 +82,7 @@ $this->title = Yii::t("app", "Vendor | Profile");
                         <dt class="col-sm-5 mb-sm-2 mb-1">Shop Image</dt>
                         <dd class="col-sm-7 mb-sm-2 mb-3">
                             <img class="rounded-circle avatar-sm" alt=""
-                                src="<?php echo ADMIN_IMAGES_URL ?>/avatar-2.jpg">
+                                src="<?= Yii::getAlias('@web') ?>/themes/backend/admin-assets/images/avatar-2.jpg">
                         </dd>
                         <dt class="col-sm-5 mb-sm-2 mb-1">Shop Name</dt>
                         <dd class="col-sm-7 mb-sm-2 mb-3">Bhojan Thali</dd>
@@ -100,12 +100,12 @@ $this->title = Yii::t("app", "Vendor | Profile");
                         <dt class="col-sm-5 mb-sm-2 mb-1">Shop Documents/License</dt>
                         <dd class="col-sm-7 mb-sm-2 mb-3">
                             <div class="popup-gallery d-flex flex-wrap">
-                                <a class="me-2" href="<?php echo ADMIN_IMAGES_URL ?>/img-3.jpg" title="Project 1">
-                                    <img class="img-thumbnail img-fluid" src="<?php echo ADMIN_IMAGES_URL ?>/img-3.jpg"
+                                <a class="me-2" href="<?= Yii::getAlias('@web') ?>/themes/backend/admin-assets/images/img-3.jpg" title="Project 1">
+                                    <img class="img-thumbnail img-fluid" src="<?= Yii::getAlias('@web') ?>/themes/backend/admin-assets/images/img-3.jpg"
                                         alt="" width="120">
                                 </a>
-                                <a href="<?php echo ADMIN_IMAGES_URL ?>/img-3.jpg" title="Project 2">
-                                    <img class="img-thumbnail img-fluid" src="<?php echo ADMIN_IMAGES_URL ?>/img-3.jpg"
+                                <a href="<?= Yii::getAlias('@web') ?>/themes/backend/admin-assets/images/img-3.jpg" title="Project 2">
+                                    <img class="img-thumbnail img-fluid" src="<?= Yii::getAlias('@web') ?>/themes/backend/admin-assets/images/img-3.jpg"
                                         alt="" width="120">
                                 </a>
                             </div>
@@ -113,12 +113,12 @@ $this->title = Yii::t("app", "Vendor | Profile");
                         <dt class="col-sm-5 mb-sm-2 mb-1">Certification</dt>
                         <dd class="col-sm-7 mb-sm-2 mb-3">
                             <div class="popup-gallery d-flex flex-wrap">
-                                <a class="me-2" href="<?php echo ADMIN_IMAGES_URL ?>/img-3.jpg" title="Project 1">
-                                    <img class="img-thumbnail img-fluid" src="<?php echo ADMIN_IMAGES_URL ?>/img-3.jpg"
+                                <a class="me-2" href="<?= Yii::getAlias('@web') ?>/themes/backend/admin-assets/images/img-3.jpg" title="Project 1">
+                                    <img class="img-thumbnail img-fluid" src="<?= Yii::getAlias('@web') ?>/themes/backend/admin-assets/images/img-3.jpg"
                                         alt="" width="120">
                                 </a>
-                                <a href="<?php echo ADMIN_IMAGES_URL ?>/img-3.jpg" title="Project 2">
-                                    <img class="img-thumbnail img-fluid" src="<?php echo ADMIN_IMAGES_URL ?>/img-3.jpg"
+                                <a href="<?= Yii::getAlias('@web') ?>/themes/backend/admin-assets/images/img-3.jpg" title="Project 2">
+                                    <img class="img-thumbnail img-fluid" src="<?= Yii::getAlias('@web') ?>/themes/backend/admin-assets/images/img-3.jpg"
                                         alt="" width="120">
                                 </a>
                             </div>

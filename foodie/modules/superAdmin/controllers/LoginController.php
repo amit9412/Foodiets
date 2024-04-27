@@ -67,7 +67,7 @@ class LoginController extends Controller
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             // return $this->goBack();
-            return $this->redirect(Url::to(['/super-admin/dashboard']));
+            return $this->redirect(Url::to(['/superadmin-panel/dashboard']));
         }
 
         //$model->password = '';

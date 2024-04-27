@@ -5,7 +5,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\Url;
 
-$this->title = Yii::t("app", "Admin | Chat");
+$this->title = Yii::t("app", "Admin | Received Invoice");
 
 ?>
 
@@ -16,7 +16,7 @@ $this->title = Yii::t("app", "Admin | Chat");
             <h4 class="mb-sm-0 font-size-18">Received Invoice</h4>
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
-                    <li class="breadcrumb-item"><a href="<?php echo BASE_URL ?>/vendor/dashboard.php">Dashboards</a></li>
+                    <li class="breadcrumb-item"><a href="<?= Url::to(['/vendor-panel/dashboard']) ?>">Dashboards</a></li>
                     <li class="breadcrumb-item active">Invoice List</li>
                 </ol>
             </div>

@@ -17,7 +17,7 @@ $this->title = Yii::t("app", "Admin | Chat");
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a
-                                                href="<?= Url::to(['/vendor/dashboard']) ?>">Dashboards</a></li>
+                                                href="<?= Url::to(['/vendor-panel/dashboard']) ?>">Dashboards</a></li>
                                         <li class="breadcrumb-item active">List</li>
                                     </ol>
                                 </div>

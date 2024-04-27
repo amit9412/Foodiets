@@ -8,7 +8,7 @@ use yii\filters\AccessControl;
 
 
 /**
- * Dashboard controller for the `super-admin` module
+ * Dashboard controller for the `superadmin-panel` module
  */
 class DashboardController extends Controller
 {

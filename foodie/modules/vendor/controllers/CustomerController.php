@@ -1,6 +1,6 @@
 <?php
 
-namespace app\modules\superAdmin\controllers;
+namespace app\modules\vendor\controllers;
 
 use app\models\Customer;
 use yii\web\Controller;
@@ -125,6 +125,17 @@ class CustomerController extends Controller
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
+    }
+
+    /**
+     * Displays a single Customer model.
+     * @param int $id ID
+     * @return string
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    public function actionCustomerDetails()
+    {
+        return $this->render('customer-details');
     }
 
     /**
